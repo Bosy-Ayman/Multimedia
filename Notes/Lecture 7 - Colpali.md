@@ -182,7 +182,7 @@ processor = AutoProcessor.from_pretrained(model_name)
 def split_into_patches_with_coords(img, patch_size=224, stride=224):
     patches = []
     coords = []
-    w, h = img.sizec
+    w, h = img.size
     # Loop over the height and width of the image using a sliding window
     for top in range(0, h - patch_size + 1, stride):
         for left in range(0, w - patch_size + 1, stride):
